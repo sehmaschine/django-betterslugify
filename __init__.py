@@ -1,5 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+Better slugify
+Enhancement of Django's slugify function
+
+Sponsored by Webrunners GmbH <http://www.webrunners.de>
+
+:author: Christoph von Krüchten <c.vonkruechten@webrunners.de>
+:date: 03.11.2010
+:version: $Id$
+"""
 
 import re, unicodedata, settings
 from django.template.defaultfilters import slugify as django_slugify
@@ -59,7 +69,7 @@ def better_slugify(value, remove_stopwords=True, slugify=True, max_words=None):
 
     lang = settings.LANGUAGE_CODE.lower()
 
-    logger.debug("Slugifying %s, language %s" % (value, lang))
+    logger.debug("Slugifying '%s', language: %s" % (value, lang))
 
     # remove stopwords
     if remove_stopwords and lang in stopwords:
