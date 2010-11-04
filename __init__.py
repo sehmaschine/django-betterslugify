@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-Better slugify
+Slugifornication
 Enhancement of Django's slugify function
 
 Sponsored by Webrunners GmbH <http://www.webrunners.de>
+Stopword list by http://www.ranks.nl/resources/stopwords.html
 
 :author: Christoph von Krüchten <c.vonkruechten@webrunners.de>
 :date: 03.11.2010
@@ -38,14 +39,27 @@ stopwords = {
        u"he'll",u"he's",u"her",u"here",u"here's",u"hers",u"herself",u"him",u"himself",u"his",u"how",u"how's",u"i",
        u"i'd",u"i'll",u"i'm",u"i've",u"if",u"in",u"into",u"is",u"isn't",u"it",u"it's",u"its",u"itself",u"let's",u"me",
        u"more",u"most",u"mustn't",u"my",u"myself",u"no",u"nor",u"not",u"of",u"off",u"on",u"once",u"only",u"or",u"other",
-       u"ought",u"our",u"ours",u"	 ourselves",u"out",u"over",u"own",u"same",u"shan't",u"she",u"she'd",u"she'll",
+       u"ought",u"our",u"ours",u"ourselves",u"out",u"over",u"own",u"same",u"shan't",u"she",u"she'd",u"she'll",
        u"she's",u"should",u"shouldn't",u"so",u"some",u"such",u"than",u"that",u"that's",u"the",u"their",u"theirs",
        u"them",u"themselves",u"then",u"there",u"there's",u"these",u"they",u"they'd",u"they'll",u"they're",u"they've",
        u"this",u"those",u"through",u"to",u"too",u"under",u"until",u"up",u"very",u"was",u"wasn't",u"we",u"we'd",u"we'll",
        u"we're",u"we've",u"were",u"weren't",u"what",u"what's",u"when",u"when's",u"where",u"where's",u"which",u"while",
        u"who",u"who's",u"whom",u"why",u"why's",u"with",u"won't",u"would",u"wouldn't",u"you",u"you'd",u"you'll",
        u"you're",u"you've",u"your",u"yours",u"yourself",u"yourselves",
-    ]
+    ],
+   "fr": [
+       u"alors", u"au", u"aucuns", u"aussi", u"autre", u"avant", u"avec", u"avoir", u"bon", u"car", u"ce", u"cela",
+       u"ces", u"ceux", u"chaque", u"ci", u"comme", u"comment", u"dans", u"des", u"du", u"dedans", u"dehors", u"depuis",
+       u"deux", u"devrait", u"doit", u"donc", u"dos", u"droite", u"début", u"elle", u"elles", u"en", u"encore", u"essai",
+       u"est", u"et", u"eu", u"fait", u"faites", u"fois", u"font", u"force", u"haut", u"hors", u"ici", u"il", u"ils",
+       u"je", u"juste", u"la", u"le", u"les", u"leur", u"là", u"ma", u"maintenant", u"mais", u"mes", u"mine", u"moins",
+       u"mon", u"mot", u"même", u"ni", u"nommés", u"notre", u"nous", u"nouveaux", u"ou", u"où", u"par", u"parce",
+       u"parole", u"pas", u"personnes", u"peut", u"peu", u"pièce", u"plupart", u"pour", u"pourquoi", u"quand", u"que",
+       u"quel", u"quelle", u"quelles", u"quels", u"qui", u"sa", u"sans", u"ses", u"seulement", u"si", u"sien", u"son",
+       u"sont", u"sous", u"soyez", u"sujet", u"sur", u"ta", u"tandis", u"tellement", u"tels", u"tes", u"ton", u"tous",
+       u"tout", u"trop", u"très", u"tu", u"valeur", u"voie", u"voient", u"vont", u"votre", u"vous", u"vu", u"ça",
+       u"étaient", u"état", u"étions", u"été", u"être"
+   ]
 }
 
 umlauts = {
