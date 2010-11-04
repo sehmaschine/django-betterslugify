@@ -71,7 +71,7 @@ def better_slugify(value, remove_stopwords=True, slugify=True, max_words=None):
     """
     Better slugify
 
-    Enhancement of Django's own slugify function. Retains readability by replaceing Umlaut characters
+    Enhancement of Django's own slugify function. Retains readability by replacing Umlaut characters
     with standard ascii chars, shortens length, removes stopwords
 
     Arguments:
