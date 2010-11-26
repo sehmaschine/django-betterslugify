@@ -1,5 +1,5 @@
-Slugifornication
-================
+Better Slugify
+==============
 
 A drop in replacement for Django's slugify function.
 

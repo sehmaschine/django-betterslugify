@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-Slugifornication
+Better Slugify
 Enhancement of Django's slugify function
 
 Sponsored by Webrunners GmbH <http://www.webrunners.de>
@@ -16,7 +16,7 @@ import re, unicodedata, settings
 from django.template.defaultfilters import slugify as django_slugify
 import logging
 
-logger = logging.getLogger("slugifornication")
+logger = logging.getLogger("betterslugify")
 
 stopwords = {
    "de": [
