@@ -5,8 +5,6 @@ A drop in replacement for Django's slugify function.
 
 Sponsored by [Webrunners GmbH](http://www.webrunners.de)
 
-License: Public Domain
-
 Features:
 
 - Retains readability by replacing Umlaut characters with standard ascii chars
